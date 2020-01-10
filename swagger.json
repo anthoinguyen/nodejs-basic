@@ -1,0 +1,7 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Hệ thống API cho ứng dụng",
+    "version": "v1"
+  }
+}
