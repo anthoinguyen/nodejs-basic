@@ -1,8 +1,13 @@
-const users = require("../controllers/users");
+const users = require("../controllers/userController");
+const authMiddleware = require("../middleware/auth");
 
 module.exports = (app) => {
-  app.route("/users/:userId").get(users.getUser),
-  app.route("/users/:userId").put(users.updateUser),
-  app.route("/users/:userId").delete(users.deleteUser),
-  app.route("/users/list").get(users.listUser);
+  app.group("/user", (router) => {
+    router.use(authMiddleware);
+    router.get("/", users.getUser);
+    router.get("/list", users.listUser);
+    router.get("/:userId", users.getUserById);
+    router.put("/:userId", users.updateUser);
+    router.delete("/:userId", users.deleteUser);
+  });
 };

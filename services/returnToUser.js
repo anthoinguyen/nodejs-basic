@@ -2,7 +2,7 @@ module.exports = {
   notAllow: res => {
     return res.status(403).send({
       error: true,
-      message: "You are not allow",
+      message: "Not authorized to access this resource",
       data: null
     });
   },

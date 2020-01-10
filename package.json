@@ -1,18 +1,23 @@
 {
   "name": "nodejs-basic",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-group-routes": "^1.1.0",
+    "express-validator": "^6.3.1",
     "fs": "0.0.1-security",
     "http-errors": "~1.6.3",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.6",
     "morgan": "~1.9.1",
     "multer": "^1.4.2",

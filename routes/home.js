@@ -1,5 +1,7 @@
-const home_controller = require('../controllers/home');
+const home = require("../controllers/homeController");
 
 module.exports = (app) => {
-  app.route('/').get(home_controller.index)
+  app.group("/", (router) => {
+    router.get("/", home.index);
+  });
 }

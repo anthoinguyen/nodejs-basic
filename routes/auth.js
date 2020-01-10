@@ -1,9 +1,12 @@
-const auth = require("../controllers/auth");
+const auth = require("../controllers/authController");
+const authMiddleware = require("../middleware/auth");
 
 module.exports = (app) => {
-  app.route("/auth/signup").get(auth.signup),
-  app.route("/auth/signin").get(auth.signin),
-  app.route("/auth/res-forgot-password").get(auth.resForgotPassword),
-  app.route("/auth/acc-forgot-password").get(auth.accForgotPassword),
-  app.route("/change-password").get(auth.changePassword);
+  app.group("/auth", (router) => {
+    router.post("/signup", auth.signup);
+    router.post("/signin", auth.signin);
+    router.get("/res-forgot-password", auth.resForgotPassword);
+    router.get("/acc-forgot-password", auth.accForgotPassword);
+    router.get("/change-password",authMiddleware, auth.changePassword);
+  });
 };
