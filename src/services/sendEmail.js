@@ -10,8 +10,8 @@ module.exports = {
       SMTPAuth: true,
       SMTPSecure: "tls",
       auth: {
-        user: "anthoi.nguyen.dev@gmail.com",
-        password: "thanthoai1223..,"
+        user: "",
+        password: ""
       }
     });
 
@@ -40,8 +40,8 @@ module.exports = {
       SMTPAuth: true,
       SMTPSecure: "tls",
       auth: {
-        user: "anthoi.nguyen.dev@gmail.com",
-        password: "thanthoai1223..,"
+        user: "",
+        password: ""
       }
     });
 
